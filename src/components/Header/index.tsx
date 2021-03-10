@@ -4,7 +4,7 @@ import AppLoading from 'expo-app-loading';
 import { useFonts, Poppins_500Medium } from '@expo-google-fonts/poppins';
 
 import { styles } from './style';
-import { Launchs }  from '../../assets/menu-button';
+import { Menu }  from '../../assets/menu-button';
 
 const Header: React.FC = () => {
 
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
   return (
     <SafeAreaView style={ styles.container }>
-      <Launchs />
+      <Menu />
       <Text style={{ fontFamily: 'Poppins_500Medium', color: '#21205A', fontSize: 16 }}>My Drive</Text>
       <View style={ styles.imageBox }></View>
     </SafeAreaView>
