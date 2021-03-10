@@ -6,5 +6,11 @@ export const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     marginTop: 30,
     borderRadius: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
+  input: {
+    marginLeft: 20,
   }
 })
