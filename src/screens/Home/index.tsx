@@ -1,5 +1,6 @@
 import React from 'react';
 import { SafeAreaView} from 'react-native';
+import CardStorage from '../../components/CardStorage';
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
 
@@ -10,6 +11,7 @@ const Home: React.FC = () => {
     <SafeAreaView style={ styles.container }>
       <Header />
       <SearchBar />
+      <CardStorage />
     </SafeAreaView>
   );
 }
