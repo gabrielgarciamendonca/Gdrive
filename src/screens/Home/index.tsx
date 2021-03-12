@@ -10,9 +10,11 @@ import { styles } from './style';
 const Home: React.FC = () => {
   return (
     <SafeAreaView style={ styles.container }>
-      <Header />
-      <SearchBar />
-      <CardStorage />
+      <View style={ styles.menuContainer }>
+        <Header />
+        <SearchBar />
+        <CardStorage />
+      </View>
       <View style={ styles.foldersContainer }>
         <Filter />
       </View>
