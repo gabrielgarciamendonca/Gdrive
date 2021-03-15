@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 25,
   },
   menuContainer: {
-    margin: 10,
+    marginHorizontal: 10,
   },
   filter: {
 
