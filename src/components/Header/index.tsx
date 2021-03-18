@@ -7,7 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { styles } from './style';
 import { Menu }  from '../../assets/menu-button';
 import { TwoPoints } from '../../assets/two-points-icon';
-import { useNavigation } from '@react-navigation/native';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
 
 interface HeaderProps {
   title: string;
@@ -30,6 +30,10 @@ export default function Header(props: HeaderProps) {
     navigation.goBack();
   }
 
+  function openMenu() {
+    navigation.dispatch(DrawerActions.openDrawer());
+  }
+
   return (
     <SafeAreaView style={ styles.container }>
       {props.showCancel ? (<>
@@ -37,7 +41,7 @@ export default function Header(props: HeaderProps) {
         <TwoPoints />
       </>) :
       (<>
-        <Menu />
+        <Menu onPress={ openMenu }/>
         <Text style={{ fontFamily: 'Poppins_500Medium', color: '#21205A', fontSize: 16 }}>{ props.title }</Text>
         <View style={ styles.imageBox }></View>
       </>)
