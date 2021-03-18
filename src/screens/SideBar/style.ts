@@ -12,6 +12,21 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
+  itemsMenu: {
+    width: 80 / 100 * Dimensions.get('window').width,
+    height: 55 / 100 * Dimensions.get('window').height,
+    marginHorizontal: 10,
+    marginVertical: 20,
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 30,
+  },
+  logout: {
+    width: 80 / 100 * Dimensions.get('window').width,
+    marginHorizontal: 10,
+  },
   imageContainer: {
     width: 56,
     height: 56,
