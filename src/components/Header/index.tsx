@@ -38,6 +38,7 @@ export default function Header(props: HeaderProps) {
     <SafeAreaView style={ styles.container }>
       {props.showCancel ? (<>
         <AntDesign name='left' size={ 24 } color='#21205A' onPress={ () => { fallBack() } }/>
+        <Text style={{ fontFamily: 'Poppins_500Medium', color: '#21205A', fontSize: 16 }}>{ props.title }</Text>
         <TwoPoints />
       </>) :
       (<>
