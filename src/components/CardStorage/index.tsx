@@ -4,6 +4,7 @@ import { SafeAreaView, View, Text } from 'react-native';
 import { styles } from './style';
 import { DriveIcon } from '../../assets/google-drive-icon';
 import { AntDesign } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface CardStorageProps {
   navigate: Function;
@@ -20,9 +21,9 @@ export default function CardStorage(props: CardStorageProps) {
             <Text style={ styles.informations }>7,5 Gb / 15 Gb</Text>
           </View>
         </View>
-        <View style={ styles.backButton }>
-          <AntDesign name='right' size={ 24 } color='#FFF' onPress={ () => props.navigate() }/>
-        </View>
+        <TouchableOpacity style={ styles.backButton } onPress={ () => props.navigate() }>
+          <AntDesign name='right' size={ 24 } color='#FFF'/>
+        </TouchableOpacity>
       </View>
       <View style={ styles.slideBar }>
         <View style={ styles.slideFilled }></View>
