@@ -1,20 +1,27 @@
 import React from 'react';
-import { SafeAreaView, View, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import CardStorage from '../../components/CardStorage';
 import Filter from '../../components/Filter';
 import Folder from '../../components/Folder';
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
+import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './style';
 
-const Home: React.FC = () => {
+export default function Home() {
+
+  const navigation = useNavigation();
+
+  function handlePushDetailStorage() {
+    navigation.navigate('DetailStorage');
+  }
+
   return (
     <ScrollView style={ styles.container }>
       <View style={ styles.menuContainer }>
-        <Header />
         <SearchBar />
-        <CardStorage />
+        <CardStorage navigate={ handlePushDetailStorage }/>
       </View>
       <View style={ styles.foldersContainer }>
         <View style={ styles.filter }>
@@ -29,5 +36,3 @@ const Home: React.FC = () => {
     </ScrollView>
   );
 }
-
-export default Home;

@@ -3,9 +3,13 @@ import { SafeAreaView, View, Text } from 'react-native';
 
 import { styles } from './style';
 import { DriveIcon } from '../../assets/google-drive-icon';
-import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign } from '@expo/vector-icons';
 
-const CardStorage: React.FC = () => {
+interface CardStorageProps {
+  navigate: Function;
+}
+
+export default function CardStorage(props: CardStorageProps) {
   return (
     <SafeAreaView style={ styles.container }>
       <View style={ styles.topContainer }>
@@ -17,7 +21,7 @@ const CardStorage: React.FC = () => {
           </View>
         </View>
         <View style={ styles.backButton }>
-          <AntDesign name='right' size={ 24 } color='#FFF' />
+          <AntDesign name='right' size={ 24 } color='#FFF' onPress={ () => props.navigate() }/>
         </View>
       </View>
       <View style={ styles.slideBar }>
@@ -26,5 +30,3 @@ const CardStorage: React.FC = () => {
     </SafeAreaView>
   );
 }
-
-export default CardStorage;

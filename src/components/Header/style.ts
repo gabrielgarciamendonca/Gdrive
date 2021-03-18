@@ -6,6 +6,9 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'flex-end',
+    paddingTop: 70,
+    paddingBottom: 15,
+    paddingHorizontal: 10,
   },
   imageBox: {
     height: 24,
